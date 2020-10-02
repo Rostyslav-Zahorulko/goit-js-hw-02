@@ -1,4 +1,5 @@
 // Задание 5
+
 // Напиши функцию checkForSpam(message), принимающую 1 параметр message - строку.
 // Функция проверяет ее на содержание слов spam и sale.
 // Если нашли зарещенное слово то функция возвращает true, если запрещенных слов нет функция возвращает false.
@@ -27,14 +28,10 @@ const checkForSpam = function (message) {
 
   console.log(message.toLowerCase());
 
-  if (
+  return (
     message.toLowerCase().includes(forbiddenWord1) ||
     message.toLowerCase().includes(forbiddenWord2)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  );
 };
 
 console.log(checkForSpam('Latest technology news')); // false

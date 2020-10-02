@@ -1,4 +1,5 @@
 // Задача 2-6
+
 // Конструкция new Array(10) создаст массив, длинной в 10 элементов.
 // Значения в таком массиве будут отсутствовать, т.е. не будет даже undefined.
 // Поэтому такой массив нужно заполнить значениями для дальнейшего использования.
@@ -42,7 +43,11 @@ function mapArray(array) {
   const numbers = new Array(array.length);
   for (let i = 0; i < array.length; i += 1) {
     // Write code under this line
-    numbers.splice([i], 1, array[i] * 10);
+    numbers[i] = array[i] * 10;
+
+    // numbers.splice(i, 1, array[i] * 10);
+    // Так теж працюватиме :)
+
     console.log(numbers);
   }
   return numbers;

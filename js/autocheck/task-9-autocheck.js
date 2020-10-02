@@ -1,4 +1,5 @@
 // Задача 2-9
+
 // Есть массив logins с логинами пользователей.
 // Напиши скрипт добавления логина в массив logins.
 // Добавляемый логин должен:
@@ -28,7 +29,7 @@
 // Это позволяет переиспользовать код и изменять логику работы функции только в одном месте, не затрагивая работу программы в целом.
 
 // Предикатные функции возвращают только true или false.
-// Такие функции принято называть начиная с is: isLoginUnique и isLoginValid в нашем случае.
+// Такие функции принято называть, начиная с is: isLoginUnique и isLoginValid в нашем случае.
 
 // isLoginUnique только проверяет есть ли такой логин в массиве и возвращает true или false.
 // isLoginValid только проверяет валидный ли логин и возвращает true или false.
@@ -72,9 +73,8 @@ function addLogin(allLogins, login) {
       message = SUCCESS;
       allLogins.push(login);
     }
+    return message;
   }
-
-  return message;
 }
 
 const logins = ['Mango', 'robotGoogles', 'Poly', 'Aj4x1sBozz', 'qwerty123'];

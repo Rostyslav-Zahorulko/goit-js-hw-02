@@ -1,5 +1,7 @@
 // Задача 2-5
+
 // Функция предикат
+
 // Функция предикат возвращает true или false
 
 // Напиши функцию checkForSpam(message), принимающую 1 параметр message - строку.
@@ -17,14 +19,10 @@ function checkForSpam(str) {
 
   console.log(str.toLowerCase());
 
-  if (
+  return (
     str.toLowerCase().includes(forbiddenWord1) ||
     str.toLowerCase().includes(forbiddenWord2)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  );
 }
 
 console.log(checkForSpam('Latest technology news')); // false
